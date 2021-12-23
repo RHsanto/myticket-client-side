@@ -1,0 +1,105 @@
+
+ body{
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+.hero-section{
+  background-color: #FFC40C;
+  font-weight: bold;
+ 
+}
+ .top-header,  .main-header{
+  display: flex;
+  justify-content: space-between;
+}
+.top-header span{
+  font-size: 13px;
+  color: black;
+  margin-right: 10px;
+  
+}
+
+.main-header{
+padding-top: 20px;
+align-items: center;
+position: relative;
+z-index: 1000;
+}
+
+.menubar{
+  background-color: #242424;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.logo h3{
+  margin-left: 10px;
+  color: white;
+}
+
+.menu{
+  display: flex;
+
+}
+nav{
+ margin-right: 20px;
+ padding-top: 10px;
+ 
+}
+nav ul li{
+  display: inline-block; 
+}
+nav ul li{
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px;
+  font-weight: bold;
+}
+
+nav ul li:hover{
+ color: #FFC40C;
+}
+.navbar{
+margin-bottom: 20px;
+margin-top: 15px;
+}
+.navbar-nav li{
+  margin-bottom: 15px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.navbar-nav li:hover{
+  background-color: rgb(164, 172, 172);
+  color: black;
+}
+
+.top-2 span a{
+  color: black;
+}
+
+.button{
+color: white;
+border: 0;
+margin-top: 15px;
+margin-bottom: 20px;
+border: 1px solid white;
+width: 100px;
+border-radius: 50px;
+height: 40px !important;
+}
+.button:hover{
+  color: #FFC40C;
+  border: 1px solid #FFC40C;
+}
+.loged-btn{
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(236, 22, 22);
+  color: white;
+  font-weight: 700;
+}

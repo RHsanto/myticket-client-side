@@ -1,0 +1,59 @@
+.allevents img{
+ margin-top: 30px;
+ width: 400px;
+ z-index: 100;
+  }
+
+.allevents h1{
+background-color: rgba(187, 34, 34, 0.863);
+margin-top: -288px;
+z-index: 1000;
+position: relative;
+padding: 130px;
+width: 400px;
+margin-left: 8px;
+color: white;
+font-size: 26px;
+  }
+
+.e-1 h1:hover{
+background-color: #4cc077a8;
+  }
+.e-2 h1:hover{
+background-color:rgba(172, 41, 41, 0.671);
+  }
+.e-3 h1:hover{
+background-color:#a686e7c0;
+  }
+.e-4 h1:hover{
+background-color:rgba(211, 84, 0, 0.685);
+  }
+.e-5 h1:hover{
+background-color:#006ba1b0;
+  }
+.e-6 h1:hover{
+background-color:rgba(209, 28, 125, 0.623) ;
+  }
+ 
+
+  .e-1 h1{
+    background-color:#63e994e7 ;
+  }
+  .e-3 h1{
+    background-color:#a686e7ec ;
+  }
+  .e-4 h1{
+    background-color:rgba(211,84,0,.9) ;
+  }
+  .e-5 h1{
+    background-color:#007cbaef;
+    padding: 125px;
+    margin-top: -280px;
+  }
+  .e-6 h1{
+    background-color:rgba(209, 28, 124, 0.849) ;
+    padding: 125px;
+    margin-top: -280px;
+  }
+
+ 

@@ -1,23 +1,82 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import UpcomingEvent from './components/Upcoming-Event/UpcomingEvent';
+import Events from './components/Events/Events';
+import Gallery from './components/Gallery/Gallery';
+import Contact from './components/Contact/Contact';
+import Header from './components/Home/Header/Header';
+import Cart from './components/Cart/Cart'
+import SignIn from './components/Sign-In&Sign-Up/SignIn';
+import MainEvents from './components/AllEvents/MainEvents/MainEvents'
+import Parties from './components/AllEvents/Parties/Parties'
+import Sports from './components/AllEvents/Sports/Sports'
+import Communities from './components/AllEvents/Communities/Communities'
+import Concerts from './components/AllEvents/Concerts/Concerts'
+import Theaters from './components/AllEvents/Theaters/Theaters'
+import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AuthProvider from './Context/AuthProvider';
+import EventsDetails from './components/EventsDetails/EventsDetails';
 
 function App() {
-  return (
+  return ( 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <AuthProvider>
+   <Router>
+        <Header/>
+      <Switch>
+       <Route exact path='/'>
+        <Home/>
+       </Route>
+       <Route path='/home'>
+        <Home/>
+       </Route>
+       <Route path='/upcomingEvent'>
+       <UpcomingEvent/>
+       </Route>
+       <Route path='/events'>
+       <Events/>
+       </Route>
+       <Router path='/details/:id'>
+         <EventsDetails/>
+       </Router>
+       <Route path='/gallery'>
+         <Gallery/>
+       </Route>
+       <Route path='/contact'>
+         <Contact/>
+       </Route>
+       <Router path='/cart'>
+           <Cart/>
+       </Router>
+       <Route path='/signIn'>
+         <SignIn/>
+       </Route>
+       <PrivateRoute path='/main-events'>
+         <MainEvents/>
+       </PrivateRoute>
+       <PrivateRoute path='/parties'>
+         <Parties/>
+       </PrivateRoute>
+       <PrivateRoute path='/sports'>
+         <Sports/>
+       </PrivateRoute>
+       <PrivateRoute path ='/communities'>
+         <Communities/>
+       </PrivateRoute>
+       <PrivateRoute path ='/concert'>
+         <Concerts/>
+       </PrivateRoute>
+       <PrivateRoute path='/theaters'>
+         <Theaters/>
+       </PrivateRoute>
+       <Route path = '*'>
+         <NotFound/>
+       </Route>
+      </Switch>
+      </Router>
+   </AuthProvider>
     </div>
   );
 }

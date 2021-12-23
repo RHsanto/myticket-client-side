@@ -1,0 +1,38 @@
+.footer-section{
+  height: 400px;
+  background-color: #141414;
+  color: white;
+}
+
+
+.footer-menu ul li{
+list-style: none;
+color: white;
+border-bottom: 1px solid ;
+padding: 10px 0px;
+}
+
+.footer-icon i{
+  margin-top: 20px;
+  margin-right: 20px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  }
+  
+  .fa-facebook-f{
+   background-color: #285DA1;
+   padding: 8px 13px;
+  }
+  .fa-twitter{
+    background-color: #03A9F4;
+    padding: 8px 10px;
+  }
+  .fa-pinterest-p{
+    background-color: #df1540;
+    padding: 8px 12px;
+  }
+  .fa-youtube{
+    background-color: #FF0202;
+    padding: 8px 10px;
+  }

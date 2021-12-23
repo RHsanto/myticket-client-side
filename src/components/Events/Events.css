@@ -1,0 +1,22 @@
+.event-section{
+ height: 500px;
+width: 100%;
+}
+
+.event-section li{
+color: white;
+list-style: none;
+padding: 15px;
+margin-bottom:15px ;
+text-align: start;
+font-weight: bold;
+}
+.event-section li:hover{
+  background-color: #A4ACAC;
+ color: black;
+}
+
+.card-title{
+  font-weight: bold;
+  
+}

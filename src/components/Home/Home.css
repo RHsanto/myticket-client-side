@@ -1,0 +1,24 @@
+a{
+  text-decoration: none;
+}
+
+.upcoming{
+  margin-top: 70px ;
+}
+
+.upcoming button {
+  border-radius: 50px;
+  font-weight: bold;
+  
+}
+
+.info{
+  margin-top: -90px;
+  background-color: rgba(0, 0, 0, 0.425);
+  height: 90px;
+}
+
+.up1-info{
+
+ margin-top: 15px;
+}

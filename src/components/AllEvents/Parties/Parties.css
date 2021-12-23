@@ -1,0 +1,9 @@
+.events img{
+  height: 220px;
+}
+
+.events{
+ height: 530px;
+box-shadow: 10px 5px 10px 0px gray;
+  
+}
