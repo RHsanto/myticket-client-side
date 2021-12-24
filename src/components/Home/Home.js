@@ -42,7 +42,9 @@ const Home = () => {
                 <p><span>{homeevent.Venue}</span></p>
               </div>
               <div className="info-btn mt-3">
+             <Link to={`/ticket/${homeevent._id}`}>
              <button className='btn btn-warning'>GET TICKET</button>
+             </Link>
              </div>
               </div>
               
