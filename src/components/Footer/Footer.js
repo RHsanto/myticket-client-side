@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className="footer-section  ">
         <div className="container ">
-          <div className="row g-4  pt-5">
+          <div className="row g-4 mx-2 p-5 ">
             <div className="col-lg-4 text-start">
               <h2>myticket</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, architecto. Quaerat, fugiat animi tenetur eius possimus maiores voluptatum vel cupiditate, cumque debitis temporibus deleniti quia!</p>
@@ -28,13 +28,12 @@ const Footer = () => {
               <NavLink to='/home'><li>Home</li></NavLink>
               <NavLink to='/upcomingEvent'><li>upcoming</li></NavLink>
               <NavLink to='/events'><li>events</li></NavLink>
-              <NavLink to='/search'><li>search</li></NavLink>
               <NavLink to='/gallery'><li>gallery</li></NavLink>
               <NavLink to='/contact'><li>contact</li></NavLink>
             </ul>
           </div>
       </div>
-      <div className="col-lg-4 text-end">
+      <div className="col-lg-4 ">
         <h3>Contact Us</h3>
       <p>  Level-4, 34, Awal Centre, Banani, Dhaka <i className="fas fa-map-marked-alt"></i></p>
  <p>Official: web@programming-hero.com <i className="fas fa-envelope"></i></p>

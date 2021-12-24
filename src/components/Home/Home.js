@@ -23,7 +23,7 @@ const Home = () => {
            <div className="row my-5">
              <div className="col-lg-8 text-start">
                <h4 className='fw-bold border-start border-3 border-warning h-25'><span className='ms-1'>UPCOMING EVENTS</span></h4>
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos officiis iure possimus quos repudiandae? Harum unde quae corporis excepturi suscipit ullam ut repellat ipsa repudiandae.</p>
+               <p>If you are looking for a fun event, book your favorite event now. Here you will find a variety of events</p>
              </div>
              <div className="col-lg-4">
              <Link to='/upcomingEvent'>

@@ -1,4 +1,4 @@
-.allevents img{
+/* .allevents img{
  margin-top: 30px;
  width: 400px;
  z-index: 100;
@@ -54,6 +54,24 @@ background-color:rgba(209, 28, 125, 0.623) ;
     background-color:rgba(209, 28, 124, 0.849) ;
     padding: 125px;
     margin-top: -280px;
-  }
+  } */
+.ctext{
+  margin-top: 100px;
+  color: rgb(255, 255, 255);
+}
+.cImg img{
+  height: 300px;
+}
+.allevents img{
+  height: 100%;
+  width: 100%;
+}
+ 
+ 
+    
+
+  
+    
+    
 
  
