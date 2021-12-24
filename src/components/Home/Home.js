@@ -23,7 +23,11 @@ const Home = () => {
            <div className="row my-5">
              <div className="col-lg-8 text-start">
                <h4 className='fw-bold border-start border-3 border-warning h-25'><span className='ms-1'>UPCOMING EVENTS</span></h4>
-               <p>If you are looking for a fun event, book your favorite event now. Here you will find a variety of events</p>
+               <p className='my-4'>If you are looking for a fun event, book your favorite
+                  event now. Here you will find many more 
+                 concerts, parties, theaters, communities, 
+                 sports related events from where you can easily 
+                 book tickets. Then why not book your favorite show now?</p>
              </div>
              <div className="col-lg-4">
              <Link to='/upcomingEvent'>
@@ -33,13 +37,12 @@ const Home = () => {
            </div>
            <div className="row m-2 g-4">
            {homeEvents.map(homeevent=>
-              <div className="col-lg-4 px-0">
+              <div className="col-lg-4 px-0 text-start">
               <div className="card border-0">
               <img src={homeevent.img} className='img' alt="img" />
               <div className="d-flex justify-content-between p-3 info">
               <div className="up1-info text-light fw-bold">
-                <span >{homeevent.name.slice(0,10)}</span>
-                <p><span>{homeevent.Venue}</span></p>
+                <p><small>{homeevent.name.slice(0,31)}</small></p>
               </div>
               <div className="info-btn mt-3">
              <Link to={`/ticket/${homeevent._id}`}>

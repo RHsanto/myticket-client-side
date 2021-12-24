@@ -1,15 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import useAuth from '../../hooks/useAuth'
 import './Ticket.css'
+import axios from 'axios';
 const Ticket = () => {
+  const{user}=useAuth();
   const {ticketId}=useParams();
-  console.log(ticketId);
   const[details,setDetails]=useState([]);
+
   useEffect(()=>{
     fetch(`https://polar-garden-80118.herokuapp.com/booking/${ticketId}`)
     .then(res=>res.json())
     .then(data=>setDetails(data))
   },[])
+
+ 
+ 
+  const { register, handleSubmit,reset} = useForm();
+  const onSubmit = data =>{
+    data.email=user.email
+    data.orderName=details.name
+    data.price=details.Price
+    console.log(data)
+  
+    axios.post('https://polar-garden-80118.herokuapp.com/addOrders',data)
+    .then(res =>{
+      if(res.data.insertedId){
+        alert('Order Successful');
+        reset();
+      }
+    })
+  };
+  
+  
+ // here order details
+
   return (
     <div>
       <div className="container">
@@ -18,21 +44,16 @@ const Ticket = () => {
           <img className='img-fluid' src={details.img} alt="" />
         </div>
         <div className="col-lg-6">
-         <div className="details text-start ms-4">
-           <h1>{details.name}</h1>
-           <p><strong>{details.Venue}</strong></p>
-           <h1>${details.Price}</h1>
-           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Esse, id eos nesciunt possimus, animi rerum aspernatur 
-              consequuntur saepe facere quas fugit explicabo? Animi
-              Esse, id eos nesciunt possimus, animi rerum aspernatur 
-              consequuntur saepe facere quas fugit explicabo? Animi
-              Esse, id eos nesciunt possimus, animi rerum aspernatur 
-              consequuntur saepe facere quas fugit explicabo? Animi
-               tempora voluptatibus sapiente illo. Illum, recusandae animi.</p>
-
-           <button className='btn btn-warning'> Add to Cart</button>
-         </div>
+        <div className="booking-from text-start">
+          <h2>{details.name}</h2>
+          <h2 className='my-3'>Price: <span className='text-warning'>${details.Price}</span> </h2>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input type='email' defaultValue={user.email} {...register("email", { required: true})} />
+      <input type="number" placeholder='Phone' {...register("phone",{required: true})} />
+      <input placeholder='Address' {...register("address", { required: true})} />
+      <input type="submit" value="ADD TO CART"  className='bg-warning btn fw-bold'/>
+    </form>
+    </div>
         </div>
         </div>
       </div>
@@ -41,19 +62,3 @@ const Ticket = () => {
 };
 
 export default Ticket;
-{/* <div  className="col-lg-4 mx-auto">
-<div className="card text-start events" >
-<img src={details.img} className="card-img-top" alt="..."/>
-<div className="card-body ps-4">
-<h5 className="card-title">{details.name}</h5>
-<div className=" ">
-<p><strong>Venue</strong> :{details.Venue}</p>
-<p><strong>Date</strong> : {details.Day}</p>
-<p><strong>Time</strong> :{details.Time}</p>
-<p><strong>Price</strong> : ${details.Price}</p>
-<button className='btn btn-warning'> Book Ticket</button>
-
-</div>
-</div>
-</div>
-</div> */}
