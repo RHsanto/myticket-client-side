@@ -10,7 +10,7 @@ const Ticket = () => {
   const[details,setDetails]=useState([]);
 
   useEffect(()=>{
-    fetch(`https://polar-garden-80118.herokuapp.com/booking/${ticketId}`)
+    fetch(`https://rocky-river-97621.herokuapp.com/booking/${ticketId}`)
     .then(res=>res.json())
     .then(data=>setDetails(data))
   },[ticketId])
@@ -27,7 +27,7 @@ const Ticket = () => {
     data.price=details.Price
     console.log(data)
   
-    axios.post('https://polar-garden-80118.herokuapp.com/addOrders',data)
+    axios.post('https://rocky-river-97621.herokuapp.com/addOrders',data)
     .then(res =>{
       if(res.data.insertedId){
         alert('Order Successful');

@@ -1,6 +1,10 @@
 import React from 'react';
 import './Contact.css'
 const Contact = () => {
+
+  const clearFrom =()=>{
+window.location.reload()
+  }
   return (
     <div>
       <h1 className='title'>GET IN TOUCH</h1>
@@ -15,11 +19,11 @@ const Contact = () => {
               <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
               <label for="floatingInput">Email address</label>
           </div>
-           <div className="form-floating">
-             <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-             <label for="floatingPassword">Password</label>
-           </div>
-           <button type="submit" className='btn btn-warning mt-4'>Submit</button>
+          <div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+  <label for="floatingTextarea2">Comments</label>
+</div>
+           <button type="submit" onClick={clearFrom} className='btn btn-warning mt-4'>Submit</button>
              </div>
                 </div>
                   </div>

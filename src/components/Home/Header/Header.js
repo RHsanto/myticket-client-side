@@ -12,7 +12,7 @@ const Header = () => {
   const[cart,setCarts]=useState();
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/all-Orders/${user.email}`)
+    fetch(`https://rocky-river-97621.herokuapp.com/all-Orders/${user.email}`)
     .then(res=>res.json())
     .then(data=>setCarts(data))
   },[user.email])
@@ -22,8 +22,8 @@ const Header = () => {
       <div className="container">
       <div className="top-header p-1">
       <div className="top-1">
-        <span> <i className="fas fa-headphones"></i> (+880)1223365478</span>
-        <span> <i className="fas fa-headphones"></i> info@myticket.com</span>
+        <span> <i class="fas fa-phone-alt"></i> (+880)1223365478</span>
+        <span> <i class="fas fa-envelope"></i> info@eticket.com</span>
      </div>
       <div className="top-2 py-1">
         {
@@ -51,7 +51,7 @@ const Header = () => {
         <div className="logo">
           <img src="img/logo.PNG" alt=""/>
           <Link to='/'>
-          <h3>Myticket</h3>
+          <h3>E-ticket</h3>
           </Link>
         </div>
 
@@ -82,7 +82,6 @@ const Header = () => {
               <NavLink to='/home'><li>Home</li></NavLink>
               <NavLink to='/upcomingEvent'><li>upcoming</li></NavLink>
               <NavLink to='/events'><li>events</li></NavLink>
-              <NavLink to='/search'><li>search</li></NavLink>
               <NavLink to='/gallery'><li>gallery</li></NavLink>
               <NavLink to='/contact'><li>contact</li></NavLink>
             </>

@@ -5,7 +5,7 @@ const Communities = () => {
   const [communities,setCommunities]=useState([])
 
   useEffect(()=>{
-    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
+    fetch(`https://rocky-river-97621.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setCommunities(data.slice(19,22)))
   },[])

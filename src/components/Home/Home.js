@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 const Home = () => {
   const[homeEvents,setHomeEvents]=useState([]);
   useEffect(()=>{
-    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
+    fetch(`https://rocky-river-97621.herokuapp.com/all-events`)
   .then(res=>res.json())
   .then(data=>setHomeEvents(data.slice(0,3)))
   },[])

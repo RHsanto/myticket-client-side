@@ -33,12 +33,13 @@ const Footer = () => {
             </ul>
           </div>
       </div>
-      <div className="col-lg-4 ">
+      <div className="col-lg-4">
         <h3>Contact Us</h3>
-      <p>  Level-4, 34, Awal Centre, Banani, Dhaka <i className="fas fa-map-marked-alt"></i></p>
- <p>Official: web@programming-hero.com <i className="fas fa-envelope"></i></p>
+        <hr />
+      <p>  Gulshan, Dhaka <i className="fas fa-map-marked-alt"></i></p>
+ <p><i className="fas fa-envelope"></i> Official:  info@eticket.com </p>
 
-  <p> Helpline : 01322901104 <i className="fas fa-phone-alt"></i></p>
+  <p> <i className="fas fa-phone-alt"></i>  (+880)1223365478</p>
       </div>
          </div>
         

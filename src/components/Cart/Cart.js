@@ -7,7 +7,7 @@ const Cart = () => {
   const[orders,setOrders]=useState([]);
 
   useEffect(()=>{
-    fetch(`https://polar-garden-80118.herokuapp.com/all-Orders/${user.email}`)
+    fetch(`https://rocky-river-97621.herokuapp.com/all-Orders/${user.email}`)
     .then(res=>res.json())
     .then(data=>setOrders(data))
   },[user.email])
@@ -18,7 +18,7 @@ const Cart = () => {
     const proceed = window.confirm('Are you sure , you want to delete ?');
 
     if(proceed){
-      const url =`https://polar-garden-80118.herokuapp.com/all-Orders/${id}`
+      const url =`https://rocky-river-97621.herokuapp.com/all-Orders/${id}`
       fetch(url,{
           method: 'DELETE'
   

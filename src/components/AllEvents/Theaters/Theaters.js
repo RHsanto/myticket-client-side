@@ -5,7 +5,7 @@ const Theaters = () => {
   const [theaters,setTheaters]=useState([])
 
   useEffect(()=>{
-    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
+    fetch(`https://rocky-river-97621.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setTheaters(data.slice(28,34)))
   },[])

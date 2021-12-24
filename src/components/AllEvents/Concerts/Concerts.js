@@ -5,7 +5,7 @@ const Concerts = () => {
   const [concerts,setConcerts]=useState([])
 
   useEffect(()=>{
-    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
+    fetch(`https://rocky-river-97621.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setConcerts(data.slice(22,28)))
   },[])
