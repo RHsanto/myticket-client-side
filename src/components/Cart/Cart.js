@@ -47,8 +47,8 @@ const Cart = () => {
   orders.map(order=><div key={order._id}>
   <div className="container ">
   
-    <div className="row">
-      <div className="col-lg-6">
+    <div className="row g-4">
+      <div className="col-lg-6 mx-auto">
       <div className="card mb-3">
        <div className="row g-0">
        <div className="col-md-5">
