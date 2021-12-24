@@ -49,9 +49,9 @@ function App() {
        <Route path='/contact'>
          <Contact/>
        </Route>
-       <Router path='/cart'>
+       <PrivateRoute path='/cart'>
            <Cart/>
-       </Router>
+       </PrivateRoute>
        <Route path='/signIn'>
          <SignIn/>
        </Route>

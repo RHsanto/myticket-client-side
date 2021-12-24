@@ -13,14 +13,17 @@ const Ticket = () => {
     fetch(`https://polar-garden-80118.herokuapp.com/booking/${ticketId}`)
     .then(res=>res.json())
     .then(data=>setDetails(data))
-  },[])
+  },[ticketId])
 
  
  
   const { register, handleSubmit,reset} = useForm();
   const onSubmit = data =>{
     data.email=user.email
+    data.displayName=user.displayName
+    data.orderImg=details.img
     data.orderName=details.name
+    data.orderVenue=details.Venue
     data.price=details.Price
     console.log(data)
   
@@ -29,6 +32,7 @@ const Ticket = () => {
       if(res.data.insertedId){
         alert('Order Successful');
         reset();
+        window.location.reload()
       }
     })
   };
@@ -48,7 +52,8 @@ const Ticket = () => {
           <h2>{details.name}</h2>
           <h2 className='my-3'>Price: <span className='text-warning'>${details.Price}</span> </h2>
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input type='email' defaultValue={user.email} {...register("email", { required: true})} />
+      <input type='email' defaultValue={user.email} {...register("email")} />
+      <input type='text' defaultValue={user.displayName} {...register("displayName")} />
       <input type="number" placeholder='Phone' {...register("phone",{required: true})} />
       <input placeholder='Address' {...register("address", { required: true})} />
       <input type="submit" value="ADD TO CART"  className='bg-warning btn fw-bold'/>

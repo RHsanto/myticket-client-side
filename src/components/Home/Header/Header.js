@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './Header.css'
@@ -9,6 +9,13 @@ import useFirebase from '../../../hooks/useFirebase';
 
 const Header = () => {
   const{user,logOut}=useFirebase();
+  const[cart,setCarts]=useState();
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/all-Orders/${user.email}`)
+    .then(res=>res.json())
+    .then(data=>setCarts(data))
+  },[user.email])
   return (
 <div>
     <div className='hero-section'>
@@ -59,7 +66,7 @@ const Header = () => {
             </ul>
           </nav>
          <NavLink to='/cart'>
-         <button className="button btn me-3" > <ShoppingCartIcon/></button>
+         <button className="button btn me-3" > <ShoppingCartIcon/> {cart?.length}</button>
          </NavLink>
           
            {/* <!-- start offcanvas menu  --> */}
