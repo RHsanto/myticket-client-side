@@ -9,7 +9,6 @@ a{
 .upcoming button {
   border-radius: 50px;
   font-weight: bold;
-  
 }
 
 .info{
@@ -21,4 +20,7 @@ a{
 .up1-info{
 
  margin-top: 15px;
+}
+.img{
+  height: 320px;
 }

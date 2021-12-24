@@ -5,7 +5,7 @@ const Parties = () => {
   const [parties,setParties]=useState([])
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/all-events`)
+    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setParties(data.slice(12,15)))
   },[])
@@ -27,13 +27,15 @@ const Parties = () => {
           <p><strong>Date</strong> : {partie.Day}</p>
           <p><strong>Time</strong> :{partie.Time}</p>
           <p><strong>Price</strong> : ${partie.Price}</p>
-          <Link to={`/detail/${partie._id}`}>
+        
+          <Link to={`/ticket/${partie._id}`}>
           <button className='btn btn-warning'> Book Ticket</button>
           </Link>
+  
           </div>
     </div>
   </div>
-            </div>
+   </div>
            )
          }
         </div>

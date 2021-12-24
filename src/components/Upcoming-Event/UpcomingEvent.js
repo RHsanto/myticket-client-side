@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Upcoming.css'
 const UpcomingEvent = () => {
   const [upevents,setUpevents]=useState([]);
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/all-events`)
+    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setUpevents(data.slice(0,5)))
   },[])
@@ -32,7 +33,10 @@ const UpcomingEvent = () => {
            <p><strong>Day</strong> : {upevent.Day}</p>
            <p><strong>Time</strong> : {upevent.Time}</p>
            <p><strong>Price</strong> : ${upevent.Price}</p>
+           <Link to={`/ticket/${upevent._id}`}>
            <button className='btn btn-warning'> Book Ticket</button>
+           </Link>
+          
            </div>
            </>
    

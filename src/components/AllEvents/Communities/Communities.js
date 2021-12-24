@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Communities.css'
 const Communities = () => {
   const [communities,setCommunities]=useState([])
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/all-events`)
+    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setCommunities(data.slice(19,22)))
   },[])
@@ -25,7 +26,9 @@ const Communities = () => {
           <p><strong>Date</strong> : {communitie.Day}</p>
           <p><strong>Time</strong> :{communitie.Time}</p>
           <p><strong>Price</strong> : ${communitie.Price}</p>
+          <Link to={`/ticket/${communitie._id}`}>
           <button className='btn btn-warning'> Book Ticket</button>
+          </Link>
           </div>
            </div>
             </div>

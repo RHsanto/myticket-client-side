@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from '../Home/Slider/Slider';
-import Img1 from '../../images/up-1.jpeg'
-import Img2 from '../../images/up-2.jpeg'
-import Img3 from '../../images/up-3.jpg'
-import './Home.css'
 import AllEvents from '../AllEvents/AllEvents';
 import Counts from '../Counts/Counts';
 import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
+import './Home.css'
+import { useEffect } from 'react';
 
 
 const Home = () => {
-  return (
+  const[homeEvents,setHomeEvents]=useState([]);
+  useEffect(()=>{
+    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
+  .then(res=>res.json())
+  .then(data=>setHomeEvents(data.slice(0,3)))
+  },[])
+   return (
     <div>
       <Slider/>
        <div className="upcoming ">
@@ -28,53 +32,25 @@ const Home = () => {
              </div>
            </div>
            <div className="row m-2 g-4">
-             <div className="col-lg-4 px-0">
-                <div className="card border-0">
-                <img src={Img1} alt="img" />
-                <div className="d-flex justify-content-between p-3 info">
-                <div className="up1-info text-light fw-bold">
-                  <span >Beach Volletball Cup IF 3</span>
-                  <p><span>IF 3 Hal</span></p>
-              
-                </div>
-                <div className="info-btn mt-3">
-               <button className='btn btn-warning'>GET TICKET</button>
-               </div>
-                </div>
-                
-              
-                </div>
+           {homeEvents.map(homeevent=>
+              <div className="col-lg-4 px-0">
+              <div className="card border-0">
+              <img src={homeevent.img} className='img' alt="img" />
+              <div className="d-flex justify-content-between p-3 info">
+              <div className="up1-info text-light fw-bold">
+                <span >{homeevent.name.slice(0,10)}</span>
+                <p><span>{homeevent.Venue}</span></p>
+              </div>
+              <div className="info-btn mt-3">
+             <button className='btn btn-warning'>GET TICKET</button>
              </div>
-             <div className="col-lg-4 px-0">
-             <div className="card ">
-             <img src={Img2} alt="img" />
-             <div className="d-flex justify-content-between p-3 info">
-                <div className="up1-info text-light fw-bold">
-                  <span >Guitar Solo & Dance</span>
-                  <p><span>La Terazza</span></p>
+              </div>
               
-                </div>
-                <div className="info-btn mt-3">
-               <button className='btn btn-warning'>GET TICKET</button>
-               </div>
-                </div>
-             </div>
-             </div>
-             <div className="col-lg-4 px-0">
-            <div className="card">
-            <img src={Img3} alt="img" />
-            <div className="d-flex justify-content-between p-3 info">
-                <div className="up1-info text-light fw-bold">
-                  <span >Squash Junior Tournament</span>
-                  <p><span>Squash Open Cube Dallas</span></p>
-              
-                </div>
-                <div className="info-btn mt-3">
-               <button className='btn btn-warning'>GET TICKET</button>
-               </div>
-                </div>
-            </div>
-             </div>
+            
+              </div>
+           </div>
+            )}
+             
            </div>
 
          </div>

@@ -17,7 +17,8 @@ import Theaters from './components/AllEvents/Theaters/Theaters'
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './Context/AuthProvider';
-import EventsDetails from './components/EventsDetails/EventsDetails';
+import Ticket from './components/Ticket/Ticket';
+
 
 function App() {
   return ( 
@@ -29,8 +30,12 @@ function App() {
        <Route exact path='/'>
         <Home/>
        </Route>
+     
        <Route path='/home'>
         <Home/>
+       </Route>
+       <Route  path='/ticket/:ticketId'>
+        <Ticket/>
        </Route>
        <Route path='/upcomingEvent'>
        <UpcomingEvent/>
@@ -38,9 +43,6 @@ function App() {
        <Route path='/events'>
        <Events/>
        </Route>
-       <Router path='/details/:id'>
-         <EventsDetails/>
-       </Router>
        <Route path='/gallery'>
          <Gallery/>
        </Route>
@@ -71,6 +73,7 @@ function App() {
        <PrivateRoute path='/theaters'>
          <Theaters/>
        </PrivateRoute>
+       
        <Route path = '*'>
          <NotFound/>
        </Route>

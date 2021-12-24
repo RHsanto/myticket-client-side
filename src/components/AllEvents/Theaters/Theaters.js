@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Theaters.css'
 const Theaters = () => {
   const [theaters,setTheaters]=useState([])
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/all-events`)
+    fetch(`https://polar-garden-80118.herokuapp.com/all-events`)
     .then(res=>res.json())
     .then(data=>setTheaters(data.slice(28,34)))
   },[])
@@ -25,7 +26,9 @@ const Theaters = () => {
           <p><strong>Date</strong> : {theaters.Day}</p>
           <p><strong>Time</strong> :{theaters.Time}</p>
           <p><strong>Price</strong> : ${theaters.Price}</p>
+          <Link to={`/ticket/${theaters._id}`}>
           <button className='btn btn-warning'> Book Ticket</button>
+          </Link>
           </div>
            </div>
             </div>
