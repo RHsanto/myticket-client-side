@@ -8,6 +8,10 @@ import EImg5 from '../../images/consert.jpeg'
 import EImg6 from '../../images/Theater.jpg'
 
 import './AllEvents.css'
+import Animation from './Slider_3D/Animation';
+
+
+
 const AllEvents = () => {
   return (
     <div>
@@ -97,8 +101,10 @@ const AllEvents = () => {
     </div>
 
   </div>
+{/* <Animation/> */}
  </div>
     </div>
+  
   );
 };
 
