@@ -6,9 +6,8 @@ import EImg3 from '../../images/events-4.jpeg'
 import EImg4 from '../../images/commu.jpeg'
 import EImg5 from '../../images/consert.jpeg'
 import EImg6 from '../../images/Theater.jpg'
-
 import './AllEvents.css'
-import Animation from './Slider_3D/Animation';
+
 
 
 
