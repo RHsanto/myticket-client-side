@@ -22,8 +22,8 @@ const Header = () => {
       <div className="container">
       <div className="top-header p-1">
       <div className="top-1">
-        <span> <i class="fas fa-phone-alt"></i> (+880)1223365478</span>
-        <span> <i class="fas fa-envelope"></i> info@eticket.com</span>
+        <span> <i  className="fas fa-phone-alt"></i> (+880)1223365478</span>
+        <span> <i  className="fas fa-envelope"></i> info@eticket.com</span>
      </div>
       <div className="top-2 py-1">
         {

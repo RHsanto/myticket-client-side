@@ -19,8 +19,8 @@ window.location.reload()
               <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
               <label for="floatingInput">Email address</label>
           </div>
-          <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+          <div  className="form-floating">
+  <textarea  className="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
   <label for="floatingTextarea2">Comments</label>
 </div>
            <button type="submit" onClick={clearFrom} className='btn btn-warning mt-4'>Submit</button>

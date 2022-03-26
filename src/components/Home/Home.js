@@ -37,7 +37,7 @@ const Home = () => {
            </div>
            <div className="row m-2 g-4">
            {homeEvents.map(homeevent=>
-              <div className="col-lg-4 px-0 text-start">
+              <div key={homeevent._id} className="col-lg-4 px-0 text-start">
               <div className="card border-0">
               <img src={homeevent.img} className='img' alt="img" />
               <div className="d-flex justify-content-between p-3 info">

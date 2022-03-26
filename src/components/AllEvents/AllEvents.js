@@ -24,10 +24,10 @@ const AllEvents = () => {
        data-aos-easing="ease-in-sine" 
       className="col-lg-4">
     <Link to='/main-events'>
-    <div class="card cImg">
+    <div  className="card cImg">
   <img src={EImg1} className="card-img " alt="..."/>
-  <div class="card-img-overlay">
-    <h1 class="card-title ctext">EVENTS</h1>
+  <div  className="card-img-overlay">
+    <h1  className="card-title ctext">EVENTS</h1>
     </div>
      </div>
     </Link>
@@ -37,10 +37,10 @@ const AllEvents = () => {
       data-aos-easing="linear"
       data-aos-duration="1500">
     <Link to='/sports'>
-    <div class="card cImg">
+    <div  className="card cImg">
   <img src={EImg2} className="card-img " alt="..."/>
-  <div class="card-img-overlay">
-    <h1 class="card-title ctext">SPORTS</h1>
+  <div  className="card-img-overlay">
+    <h1  className="card-title ctext">SPORTS</h1>
     </div>
      </div>
     </Link>
@@ -50,10 +50,10 @@ const AllEvents = () => {
        data-aos-offset="300"
        data-aos-easing="ease-in-sine">
     <Link to='/parties'>
-    <div class="card cImg">
+    <div  className="card cImg">
   <img src={EImg3} className="card-img " alt="..."/>
-  <div class="card-img-overlay">
-    <h1 class="card-title ctext">PARTIES</h1>
+  <div  className="card-img-overlay">
+    <h1  className="card-title ctext">PARTIES</h1>
     </div>
      </div>
     </Link>
@@ -63,10 +63,10 @@ const AllEvents = () => {
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
     <Link to='/communities'>
-    <div class="card cImg ">
+    <div  className="card cImg ">
   <img src={EImg4} className="card-img " alt="..."/>
-  <div class="card-img-overlay">
-    <h1 class="card-title ctext">COMMUNITIES</h1>
+  <div  className="card-img-overlay">
+    <h1  className="card-title ctext">COMMUNITIES</h1>
     </div>
      </div>
     </Link>
@@ -76,10 +76,10 @@ const AllEvents = () => {
       data-aos="fade-up"
       data-aos-duration="3000">
     <Link to='/concert'>
-    <div class="card cImg">
+    <div  className="card cImg">
   <img src={EImg5} className="card-img " alt="..."/>
-  <div class="card-img-overlay">
-    <h1 class="card-title ctext">CONCERT</h1>
+  <div  className="card-img-overlay">
+    <h1  className="card-title ctext">CONCERT</h1>
     </div>
      </div>
     </Link>
@@ -90,10 +90,10 @@ const AllEvents = () => {
       data-aos-easing="ease-in-sine"
      >
     <Link to='/theaters'>
-    <div class="card cImg">
+    <div  className="card cImg">
   <img src={EImg6} className="card-img " alt="..."/>
-  <div class="card-img-overlay">
-    <h1 class="card-title ctext">THEATERS</h1>
+  <div  className="card-img-overlay">
+    <h1  className="card-title ctext">THEATERS</h1>
     </div>
      </div>
     </Link>
